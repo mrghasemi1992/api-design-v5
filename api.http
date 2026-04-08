@@ -1,0 +1,42 @@
+### Register
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "testemail@test.com",
+  "password": "admin1234"
+}
+
+### Login
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "mrghasemi1992@gmail.com",
+  "password": "my-very-strong-password"
+}
+
+### Create user habit
+POST http://localhost:3000/api/habits
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ImIwMjE0MDUzLTk2NzQtNDNiOC1hYTEzLThmZmZiNmFmZDE3NyIsImVtYWlsIjoibXJnaGFzZW1pMTk5MkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6Im1yZ2hhc2VtaTE5OTIiLCJpYXQiOjE3NzUzNjQ5MDIsImV4cCI6MTc3NTk2OTcwMn0.M7m9fnbaEshPCw8tQWFPPOdiEgXkqwVo5qFOHahyY2g
+
+{
+  "name": "Stretch",
+  "frequency": "daily",
+  "targetCount": 30
+}
+
+### Get all habits
+GET http://localhost:3000/api/habits
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ImIwMjE0MDUzLTk2NzQtNDNiOC1hYTEzLThmZmZiNmFmZDE3NyIsImVtYWlsIjoibXJnaGFzZW1pMTk5MkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6Im1yZ2hhc2VtaTE5OTIiLCJpYXQiOjE3NzUzNjQ5MDIsImV4cCI6MTc3NTk2OTcwMn0.M7m9fnbaEshPCw8tQWFPPOdiEgXkqwVo5qFOHahyY2g
+
+### Update habit
+PATCH http://localhost:3000/api/habits/b363a689-9053-417f-875a-ee7888affbf0
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6ImIwMjE0MDUzLTk2NzQtNDNiOC1hYTEzLThmZmZiNmFmZDE3NyIsImVtYWlsIjoibXJnaGFzZW1pMTk5MkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6Im1yZ2hhc2VtaTE5OTIiLCJpYXQiOjE3NzUzNjQ5MDIsImV4cCI6MTc3NTk2OTcwMn0.M7m9fnbaEshPCw8tQWFPPOdiEgXkqwVo5qFOHahyY2g
+
+{
+  "name": "Stretch Hammies"
+}
